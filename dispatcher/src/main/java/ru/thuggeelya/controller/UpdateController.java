@@ -15,7 +15,7 @@ public class UpdateController {
 
     private TelegramBot telegramBot;
     private final MessageUtils messageUtils;
-    private UpdateProducer updateProducer;
+    private final UpdateProducer updateProducer;
 
     public UpdateController(MessageUtils messageUtils, UpdateProducer updateProducer) {
         this.messageUtils = messageUtils;
@@ -65,7 +65,7 @@ public class UpdateController {
         setView(sendMessage);
     }
 
-    private void setView(SendMessage sendMessage) {
+    public void setView(SendMessage sendMessage) {
         telegramBot.sendAnswerMessage(sendMessage);
     }
 
